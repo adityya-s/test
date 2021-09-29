@@ -10,233 +10,466 @@
             background: transparent;
         }
         
-        body {
-            height: 100%;
-            margin: 10;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
-        }
-        
-        .card3 {
-            position: relative;
-            width: 35vw;
-            height: 50vw;
-            left: 0%;
-            border: 8px solid #008cffd2;
-            margin: 60px auto 60px auto;
-            box-shadow: inset 15px 0px 15px 0px rgba(0, 0, 0, 0.1);
-            background-image: url("https://res.cloudinary.com/dnujynvdn/image/upload/v1632324167/backimg.jpg");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-color: #e6f0e6;
-        }
-        
-        .card3 .text-container {
-            width: 80%;
-            height: 85%;
-            margin: 0 0 0 0;
-            overflow-y: scroll;
-            padding: 10%;
-            padding-top: 12%;
-            display: flex;
-            justify-content: left;
-            align-items: left;
-            text-align: left;
-        }
-        
-        .strikethrough {
-            text-decoration: line-through;
-        }
-        
-        .card3 .text-container #head {
-            font-family: 'Nobile', sans-serif;
-            font-size: 1.5em;
-        }
-        
-        .card3 p {
-            font-size: 1.1em;
-            line-height: 1.4;
-            font-family: 'Nobile';
-            color: #331717;
-            font-style: italic;
-            text-align: left;
-            margin: 1;
-            padding: 20px;
-        }
-        
-        .card3 .front {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            margin: -8px 0px 0px -8px;
-            border: 8px solid #008cffd2;
-            backface-visibility: hidden;
-            background-color: #fcfcfc;
-            /* background-image: url($cover-image);*/
-            background-size: contain;
-            transform-style: preserve-3d;
-            transform-origin: 0% 50%;
-            transform: perspective(800px) rotateY(0deg);
-            transition: all 0.8s ease-in-out;
-        }
-        
-        .card3:hover .front {
-            transform: perspective(800px) rotateY(-170deg);
-            background-image: linear-gradient(to top, #feada6 0%, #7c3c3c 100%);
-        }
-        
-        .card3:hover .back {
-            transform: perspective(800px) rotateY(-170deg);
-            box-shadow: 7px 0px 5px 0px rgba(0, 0, 0, 0.3), inset 2px 0px 15px 0px rgba(0, 0, 0, 0.1);
-        }
-        
-        .card3 .back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-image: url("https://res.cloudinary.com/dnujynvdn/image/upload/v1631714186/collage-min.jpg");
-            border: 8px solid #008cffd2;
-            margin: -8px 0px 0px -8px;
-            backface-visibility: visible;
-            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, .5));
-            transform-style: preserve-3d;
-            transform-origin: 0% 50%;
-            transform: perspective(800px) rotateY(0deg);
-            transition: all 0.8s ease-in-out;
-            background-color: #f2f7f2;
-            box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-color: #e6f0e6;
-        }
+        @import url(https://fonts.googleapis.com/css?family=Nobile:400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script);
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body {
+  background: #DD5E89;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F7BB97, #DD5E89);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F7BB97, #DD5E89); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-        .vertical-center {
-            margin: 0;
-            position: absolute;
-            top: 50%;
-            left: 28%;
-            -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-            width: 45vw;
-            height: 65vw;
-        }
-        
-        .imgset {
-            position: relative;
-            z-index: 1;
-            margin-bottom: -215px;
-        }
-        
-        .imgset img {
-            object-fit: fill;
-            box-shadow: 0px 6px 11px 7px rgba(0, 0, 0, 0.22);
-            border-radius: 5px;
-        }
-        
-        p {
-            text-align: center;
-            font-family: verdana;
-            color: white;
-            margin: 0;
-        }
-        
-        .right {
-            text-align: right;
-            font-family: verdana;
-        }
-        
-        div.b {
-            line-height: 1.6;
-        }
-        
-        .card1:hover,
-        .card2:hover,
-        .card3:hover {
-            transition: all 2s;
-            left: 20vw;
-        }
-        
-        .blog-card .description {
-            padding: 1rem;
-            background: #fff;
-            position: relative;
-            z-index: 1;
-            display: flex;
-            justify-content: center;
-        }
-        
-        .name {
-            line-height: 1;
-            margin: 0;
-            font-size: 1.5rem;
-            padding-bottom: 10px;
-            color: #55108c;
-            font-family: 'verdana';
-            text-align: center;
-            padding: 2rem 1rem;
-        }
-        
-        .greeting {
-            height: 90%;
-            width: 95%;
-            overflow-y: scroll;
-            text-align: left;
-            margin: 2;
-        }
-        
-        @media only screen and (min-width:480px) and (max-width:600px) {
-            .card1,
-            .card2,
-            .card3 {
-                width: 35vw;
-                height: 50vw;
-            }
-        }
-        
-        @media only screen and (min-width:601px) and (max-width:900px) {
-            .card1,
-            .card2,
-            .card3 {
-                width: 35vw;
-                height: 50vw;
-            }
-        }
-        
-        @media only screen and (min-width:900px) and (max-width:1070px) {
-            .card1,
-            .card2,
-            .card3 {
-                width: 35vw;
-                height: 50vw;
-            }
-        }
-    </style>
+  padding: 50px;
+}
+
+.imgset{
+  
+}
+#card-front {
+  color: #FFDFDF;
+}
+#card, #card-front, #card-inside {
+  height: 480px;
+}
+
+.wrap {
+    padding: 1.5em 2.5em;
+    height: 100%;
+    overflow: scroll;
+
+}
+#card-front, #card-inside {
+  width: 50%;
+  -webkit-box-shadow: 2px 2px 30px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .5);
+  -moz-box-shadow: 2px 2px 30px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .5);
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .5);
+  position: absolute;
+  left: 25%;
+	
+}
+
+
+#card-inside .wrap {
+    background: #FFEFEF;
+    -webkit-box-shadow: inset 2px 0 1px rgba(0, 0, 0, .05);
+    -moz-box-shadow: inset 2px 0 1px rgba(0, 0, 0, .05);
+    box-shadow: inset 2px 0 1px rgba(0, 0, 0, .05);
+}
+#card {
+    max-width: 960px;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    perspective: 5000px;
+    -moz-perspective: 5000px;
+    -webkit-perspective: 5000px;
+    position: relative;
+    top: calc((50vh - 240px) );
+}
+
+
+
+#card h1 {
+    padding-top: 24px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-family: 'Nobile', sans-serif;
+    font-style: italic;
+    font-size: 36px;
+    text-shadow: 
+        4px 4px 0px rgba(0, 0, 0, .15),
+        1px 1px 0 rgba(255, 200, 200, 255),
+        2px 2px 0 rgba(255, 150, 150, 255),
+        3px 3px 0 rgba(255, 125, 125, 255);
+    color: #FFF;
+}
+#card-inside {
+    font-size: 1.0em;
+    line-height: 1.4;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #331717;
+    font-style: normal;
+}
+
+p {
+    margin-top: 1em;
+}
+
+p:first-child {
+    margin-top: 0;
+}
+
+p.signed {
+    margin-top: 1.3em;
+    text-align: right;
+    font-family: 'Dancing Script', sans-serif;
+    font-size: 0.9em;
+}
+
+#card-front {
+    background-color: #FF5555;
+    background-image: linear-gradient(top, #FF5555 0%, #FF7777 100%);
+    background-image: -moz-linear-gradient(top, #FF5555 0%, #FF7777 100%);
+    background-image: -webkit-linear-gradient(top, #FF5555 0%, #FF7777 100%);
+            transform-origin: left;
+       -moz-transform-origin: left;
+    -webkit-transform-origin: left;
+            transition:         transform 1s linear;
+       -moz-transition:    -moz-transform 1s linear;
+    -webkit-transition: -webkit-transform 1s linear;
+    position: relative;
+}
+
+#card-front .wrap {
+            transition: background 1s linear;
+       -moz-transition: background 1s linear;
+    -webkit-transition: background 1s linear;
+}
+
+#card-front button {
+  position: absolute;
+  bottom: 1em;
+  right: -12px;
+  background: #F44;
+  color: #FFF;
+  font-family: 'Nobile', sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: .5em;
+  border: none;
+  cursor: pointer;
+          box-shadow: 2px 2px 3px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .4);
+     -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .4);
+  -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .4);
+}
+
+#card-front button:hover,
+#card-front button:focus {
+  background: #F22;
+}
+
+#close {
+  display: none;
+}
+
+#card.open-fully #close,
+#card-open-half #close {
+  display: inline;
+}
+
+#card.open-fully #open {
+  display: none;
+}
+
+
+#card.open-half #card-front,
+#card.close-half #card-front {
+    animation: all 2s;
+            transform: rotateY(-90deg);
+       -moz-transform: rotateY(-90deg);
+    -webkit-transform: rotateY(-90deg);
+}
+#card.open-half #card-front .wrap {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+#card.open-fully #card-front,
+#card.close-half #card-front {
+  background: #FFEFEF;
+}
+
+#card.open-fully #card-front {
+    transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+}
+
+#card.open-fully #card-front .wrap {
+    object-fit: cover;
+    background-image: url("https://res.cloudinary.com/dnujynvdn/image/upload/v1631714186/collage-min.jpg");
+    background-size: center;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    backface-visibility: visible;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, .5));
+    background-color: #f2f7f2;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #FFEFEF;
+
+}
+
+#card.open-fully #card-front .wrap *,
+#card.close-half #card-front .wrap * {
+   display: none;
+}
+
+footer {
+  max-width: 500px;
+  margin: 40px auto;
+  font-family: 'Nobile', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #888;
+  text-align: center;
+}
+
+.wrapper {
+	height: 80%;
+  width: 80%;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+  top: 0;
+  bottom: 0;
+	
+}
+
+.container {
+	background-color: #ffffff;
+	position: relative;
+	height: 360px;
+	border-radius: 8px;
+	-webkit-box-shadow: 0 30px 40px rgb(68, 52, 2, 0.3);
+	box-shadow: 0 30px 40px rgb(68, 52, 2, 0.3);
+}
+a {
+	display: block;
+	width: 100%;
+	background-color: #ffffff;
+	position: absolute;
+	bottom: 0;
+	padding: 12px 0;
+	text-align: center;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	font-size: 20px;
+	text-decoration: none;
+	color: #000000;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 30px 40px rgb(68, 52, 2, 0.3);
+	box-shadow: 0 30px 40px rgb(68, 52, 2, 0.3);
+}
+.cake {
+	width: 100%;
+	position: absolute;
+	bottom: 50px;
+}
+.bottom-layer,
+.top-layer,
+.middle-layer {
+	height: 80px;
+	width: 240px;
+	position: relative;
+	margin: auto;
+	background-repeat: repeat;
+	background-size: 100% 100%, 60px 100px;
+	background-position: 28px 0;
+	background-image: -o-linear-gradient(
+			transparent 50px,
+			#fedbab 50px,
+			#fedbab 60px,
+			transparent 60px
+		),
+		-o-radial-gradient(30px 5px, circle, #994c10 30px, #fcbf29 31px);
+	background-image: linear-gradient(
+			transparent 50px,
+			#fedbab 50px,
+			#fedbab 60px,
+			transparent 60px
+		),
+		radial-gradient(circle at 30px 5px, #994c10 30px, #fcbf29 31px);
+	border-radius: 10px 10px 0 0;
+}
+.middle-layer {
+	-webkit-transform: scale(0.85);
+	-ms-transform: scale(0.85);
+	transform: scale(0.85);
+	top: 72px;
+	-webkit-animation: rise-1 2s forwards;
+	animation: rise-1 2s forwards;
+}
+@-webkit-keyframes rise-1 {
+	100% {
+		top: 7px;
+	}
+}
+@keyframes rise-1 {
+	100% {
+		top: 7px;
+	}
+}
+.top-layer {
+	-webkit-transform: scale(0.7);
+	-ms-transform: scale(0.7);
+	transform: scale(0.7);
+	top: 144px;
+	-webkit-animation: rise-2 2s 2s forwards;
+	animation: rise-2 2s 2s forwards;
+}
+@-webkit-keyframes rise-2 {
+	100% {
+		top: 26px;
+	}
+}
+@keyframes rise-2 {
+	100% {
+		top: 26px;
+	}
+}
+.candle {
+	background: -o-repeating-linear-gradient(
+		45deg,
+		#fd3018 0,
+		#fd3018 5px,
+		#ffa89e 5px,
+		#ffa89e 10px
+	);
+	background: repeating-linear-gradient(
+		45deg,
+		#fd3018 0,
+		#fd3018 5px,
+		#ffa89e 5px,
+		#ffa89e 10px
+	);
+	height: 45px;
+	width: 15px;
+	position: absolute;
+	margin: auto;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	-webkit-animation: rise-3 1s 4s forwards;
+	animation: rise-3 1s 4s forwards;
+}
+@-webkit-keyframes rise-3 {
+	100% {
+		bottom: 202px;
+	}
+}
+@keyframes rise-3 {
+	100% {
+		bottom: 202px;
+	}
+}
+.candle:after {
+	content: "";
+	position: absolute;
+	height: 16px;
+	width: 16px;
+	background-color: #ffb62d;
+	border-radius: 0 50% 50% 50%;
+	-webkit-transform: scale(0) rotate(45deg);
+	-ms-transform: scale(0) rotate(45deg);
+	transform: scale(0) rotate(45deg);
+	bottom: 50px;
+	left: -0.5px;
+	-webkit-animation: flame 1.5s 5s forwards;
+	animation: flame 1.5s 5s forwards;
+}
+@-webkit-keyframes flame {
+	100% {
+		-webkit-transform: scale(1) rotate(45deg);
+		transform: scale(1) rotate(45deg);
+	}
+}
+@keyframes flame {
+	100% {
+		-webkit-transform: scale(1) rotate(45deg);
+		transform: scale(1) rotate(45deg);
+	}
+}
+ </style>
     <link rel="shortcut icon" href="https://res.cloudinary.com/dnujynvdn/image/upload/v1628689376/fav.jpg" type="image/x-icon">
     <link rel="icon" href="https://res.cloudinary.com/dnujynvdn/image/upload/v1628689376/fav.jpg" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <title>Happy bday Drishti</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <title>Happy Bday Drishti!</title>
 </head>
 
 <body>
-
-<div class="vertical-center">
-    <div class="card3">
-        <div class="back"></div>
-        <div class="front">
-            <div class="imgset">
-                <img width="100%" height="100%" src="https://i.pinimg.com/originals/8c/fa/69/8cfa691d4d68107bf9c08026f51fc837.jpg">
+    <div id="card">
+        <div id="card-inside">
+          <div class="wrap">
+            <p>Happiest Born day, Drishtyyy! ❤️</p>
+            <p>Wishing a very Happy 18th birthday to the most charming gurl Ik!</p>
+            <p>Wishing you a day filled with Love, Joy, Peace, Laughter & Happiness!</p>
+            <p>Sending you smiles for every moment of your special day, Have a Joyful Year ahead Broo!...</p>
+            <p>Once again, Many Many returns of the day, Drishti!</p>
+            <p class="signed">
+                ~ Aditya
+            </p>
+            
+          </div>
+        </div>
+    
+        <div id="card-front">
+          <div class="wrap">
+            <div class="wrapper">
+                <div class="container">
+                    <div class="cake">
+                        <div class="candle"></div>
+                        <div class="top-layer"></div>
+                        <div class="middle-layer"></div>
+                        <div class="bottom-layer"></div>
+                    </div>
+                </div>
             </div>
+          </div>
+          <button id="open">&gt;</button>
+          <button id="close">&lt;</button>
         </div>
-        <div class="text-container">
-            <p class = "greeting"><b>Happy Bdayy Drishti!</b><br><br>Happiest Bday to the most Amazing girl I Know!<br>I hope your special day will bring you lots of happiness, joy, and fun. You deserve them a lot. Enjoy!</p>
-        </div>
-    </div>
-</div>
+      </div>
+<script>
+    (function() {
+  function $(id) {
+    return document.getElementById(id);
+  }
 
-</body>
+  var card = $('card'),
+      openB = $('open'),
+      closeB = $('close'),
+      timer = null;
+  console.log('wat', card);
+  openB.addEventListener('click', function () {
+    document.querySelector('#card-front').style.left = "50%";
+    document.querySelector('#card-inside').style.left = "50%";
+    card.setAttribute('class', 'open-half');
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(function () {
+      card.setAttribute('class', 'open-fully');
+      timer = null;
+    }, 1000);
+  
+  });
+
+  closeB.addEventListener('click', function () {
+    document.querySelector('#card-front').style.left = "25%";
+    document.querySelector('#card-inside').style.left = "25%";
+
+    card.setAttribute('class', 'close-half');
+    if (timer) clearTimerout(timer);
+    timer = setTimeout(function () {
+      card.setAttribute('class', '');
+      timer = null;
+    
+    }, 1000);
+   
+  });
+  
+
+}());
+
+</script>
 
 </html>
